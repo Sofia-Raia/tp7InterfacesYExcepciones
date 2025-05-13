@@ -11,10 +11,15 @@ public class Main {
         pedido.addProducto(p4);
         Producto p5 =new Producto("Chocolate Aguila",3000);
         pedido.addProducto(p5);
+
+        Cliente cliente = new Cliente("Sofia Magali","sofi@gmail.com");
+        pedido.setCliente(cliente);
+        cliente.notificar("Se ha enviado su PEDIDO.. ");
+        System.out.println(pedido);
+
         pedido.mostrarProductos();
         double total =pedido.calcularTotal();
         System.out.println("Total $ " + total);
-
 
         TajetaDeCredito t = new TajetaDeCredito(1234567);
         t.aplicarDescuento(20);
@@ -27,8 +32,7 @@ public class Main {
 
         pedido.cambiarEstado("enviado..");
         System.out.println(pedido.getEstado());
-        Cliente cliente = new Cliente("Sofia Magali","sofi@gmail.com");
-        cliente.notificar("Se ha enviado su PEDIDO.. ");
+
 
 
 

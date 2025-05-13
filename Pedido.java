@@ -55,4 +55,12 @@ public class Pedido implements Pagable, Notificable {
     public void notificar(String mensage) {
         //completar
     }
+
+    @Override
+    public String toString() {
+        return "Pedido{" +
+                "CLIENTE: " + cliente +
+                ", estado='" + estado + '\'' +
+                '}';
+    }
 }

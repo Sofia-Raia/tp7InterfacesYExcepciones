@@ -28,4 +28,11 @@ public class Cliente implements Notificable{
     public void notificar(String mensage) {
         System.out.println(mensage);
     }
+
+    @Override
+    public String toString() {
+        return "nombre='" + nombre + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
